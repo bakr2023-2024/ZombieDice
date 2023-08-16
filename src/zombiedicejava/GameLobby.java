@@ -4,6 +4,7 @@
  */
 package zombiedicejava;
 
+import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import javax.sound.sampled.AudioInputStream;
@@ -37,7 +38,8 @@ public class GameLobby extends javax.swing.JFrame {
 
     public void playSound(String soundFilePath) {
         try {
-            InputStream inputStream = getClass().getResourceAsStream(soundFilePath);
+            // wrap the input stream inside a buffered stream
+            InputStream inputStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(inputStream);
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);
@@ -50,7 +52,8 @@ public class GameLobby extends javax.swing.JFrame {
     public Clip loopSound(String soundFilePath) {
         Clip clip = null;
         try {
-            InputStream inputStream = getClass().getResourceAsStream(soundFilePath);
+            // wrap the input stream inside a buffered stream
+            InputStream inputStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(inputStream);
             clip = AudioSystem.getClip();
             clip.open(audioStream);

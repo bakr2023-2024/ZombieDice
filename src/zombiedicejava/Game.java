@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -32,9 +33,10 @@ public class Game extends javax.swing.JFrame {
      * Creates new form Game
      */
     // A method that takes in a parameter the path of the sound file and then plays it
-    public void playSound(String soundFilePath) {
+   public void playSound(String soundFilePath) {
         try {
-            InputStream inputStream = getClass().getResourceAsStream(soundFilePath);
+            // wrap the input stream inside a buffered stream
+            InputStream inputStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(inputStream);
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);

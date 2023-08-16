@@ -1,5 +1,6 @@
 package zombiedicejava;
 
+import java.io.BufferedInputStream;
 import java.io.InputStream;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -25,7 +26,8 @@ public class Menu extends javax.swing.JFrame {
     public Clip loopSound(String soundFilePath) {
         Clip clip = null;
         try {
-            InputStream inputStream = getClass().getResourceAsStream(soundFilePath);
+            // wrap the input stream inside a buffered stream
+            InputStream inputStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(inputStream);
             clip = AudioSystem.getClip();
             clip.open(audioStream);
