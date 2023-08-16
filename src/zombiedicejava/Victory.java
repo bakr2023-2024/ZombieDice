@@ -18,7 +18,7 @@ public class Victory extends javax.swing.JFrame {
      */
     public Victory(Game game) {        
         initComponents();
-        game.playSound("/zombiedicejava/victory.wav");
+        game.playSound("/zombiedicejava/sounds/victory.wav");
         jLabel1.setText(game.winner+" Wins!");
         updateLeaderboard(game.dataTable);
         party = new ArrayList<ZombieDice.Player>(game.zombieDice.party);

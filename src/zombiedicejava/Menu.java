@@ -19,7 +19,7 @@ public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
-        mainMenuTheme = loopSound("/zombiedicejava/menu.wav");
+        mainMenuTheme = loopSound("/zombiedicejava/sounds/menu.wav");
     }
 
     public Clip loopSound(String soundFilePath) {
@@ -111,7 +111,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zombiedicejava/zombie_20.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/zombiedicejava/icons/zombie_20.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

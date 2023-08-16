@@ -317,7 +317,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/zombiedicejava/dice_1_30.png"/>
+                  <Image iconType="3" name="/zombiedicejava/icons/dice_1_30.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -328,7 +328,7 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/zombiedicejava/dice_1_30.png"/>
+                  <Image iconType="3" name="/zombiedicejava/icons/dice_1_30.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -339,14 +339,14 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/zombiedicejava/dice_1_30.png"/>
+                  <Image iconType="3" name="/zombiedicejava/icons/dice_1_30.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/zombiedicejava/shotgun_1_15.png"/>
+                  <Image iconType="3" name="/zombiedicejava/icons/shotgun_1_15.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel5"/>
               </Properties>
@@ -379,7 +379,7 @@
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/zombiedicejava/foot_15.png"/>
+                  <Image iconType="3" name="/zombiedicejava/icons/foot_15.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel5"/>
               </Properties>
@@ -387,7 +387,7 @@
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/zombiedicejava/brain_1_15.png"/>
+                  <Image iconType="3" name="/zombiedicejava/icons/brain_1_15.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel5"/>
               </Properties>

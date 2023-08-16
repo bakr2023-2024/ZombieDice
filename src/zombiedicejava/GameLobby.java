@@ -32,7 +32,7 @@ public class GameLobby extends javax.swing.JFrame {
                 tblModel.addRow(result);
             }
         }
-        lobbyTheme = loopSound("/zombiedicejava/lobby.wav");
+        lobbyTheme = loopSound("/zombiedicejava/sounds/lobby.wav");
     }
 
     public void playSound(String soundFilePath) {
@@ -185,16 +185,17 @@ public class GameLobby extends javax.swing.JFrame {
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(31, 31, 31))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,8 +207,8 @@ public class GameLobby extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
@@ -236,12 +237,12 @@ public class GameLobby extends javax.swing.JFrame {
         DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
         if (jTable1.getSelectedRowCount() == 1) {
             tblModel.removeRow(jTable1.getSelectedRow());
-            playSound("/zombiedicejava/remove.wav");
+            playSound("/zombiedicejava/sounds/remove.wav");
         } else if (jTable1.getRowCount() == 0) {
-            playSound("/zombiedicejava/noadd.wav");
+            playSound("/zombiedicejava/sounds/noadd.wav");
             JOptionPane.showMessageDialog(null, "Party is Empty");
         } else if (jTable1.getSelectedRowCount() == 0) {
-            playSound("/zombiedicejava/noadd.wav");
+            playSound("/zombiedicejava/sounds/noadd.wav");
             JOptionPane.showMessageDialog(null, "Please select a player to remove");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -251,13 +252,13 @@ public class GameLobby extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
         if (tblModel.getRowCount() >= 8) {
-            playSound("/zombiedicejava/noadd.wav");
+            playSound("/zombiedicejava/sounds/noadd.wav");
             JOptionPane.showMessageDialog(null, "Party is full");
         } else {
             boolean flag = false;
             String[] result = {enterPlayerName()};
             if (result[0].contains(" ")) {
-                playSound("/zombiedicejava/noadd.wav");
+                playSound("/zombiedicejava/sounds/noadd.wav");
                 JOptionPane.showMessageDialog(null, result[0] + " contains whitespace!");
                 return;
             }
@@ -271,10 +272,10 @@ public class GameLobby extends javax.swing.JFrame {
                 }
                 if (!flag) {
                     tblModel.addRow(result);
-                    playSound("/zombiedicejava/add.wav");
+                    playSound("/zombiedicejava/sounds/add.wav");
                     break;
                 } else {
-                    playSound("/zombiedicejava/noadd.wav");
+                    playSound("/zombiedicejava/sounds/noadd.wav");
                     JOptionPane.showMessageDialog(null, result[0] + " is duplicated!");
                     break;
                 }
@@ -285,7 +286,7 @@ public class GameLobby extends javax.swing.JFrame {
         ArrayList<String> players = new ArrayList<String>();
         DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
         if (tblModel.getRowCount() < 2 || tblModel.getRowCount() > 8) {
-            playSound("/zombiedicejava/noadd.wav");
+            playSound("/zombiedicejava/sounds/noadd.wav");
             JOptionPane.showMessageDialog(null, "Please make sure there are 2~8 players");
         } else {
             for (int i = 0; i < tblModel.getRowCount(); i++) {
