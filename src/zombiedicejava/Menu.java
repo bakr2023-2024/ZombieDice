@@ -194,7 +194,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         JOptionPane.showMessageDialog(this, "This game was created by Bakr Mohamed Bakr using Java Swing.\nLinkedin: www.linkedin.com/in/bakr-mohamed-bakr-3b815a248\n"
-                + "Github: https://github.com/bakr2023-2024" + "\nGmail: bakrmohamed231@gmail.com\n\n" + "This game is a fan-made tribute to Zombie Dice, a party dice game created by Steve Jackson Games and released in 2010.\nThis game is not intended for commercial use and all rights belong to the original creator.\nFor more information about Zombie Dice, please visit\nThe original website: http://www.sjgames.com/dice/zombiedice \nThe Wikipedia page: https://en.wikipedia.org/wiki/Zombie_Dice \n\nThank you for playing and enjoy the game!", "Game Credits", JOptionPane.INFORMATION_MESSAGE);
+                + "Github: https://github.com/bakr2023-2024" + "\nGmail: bakr2023.2024@gmail.com\n\n" + "This game is a fan-made tribute to Zombie Dice, a party dice game created by Steve Jackson Games and released in 2010.\nThis game is not intended for commercial use and all rights belong to the original creator.\nFor more information about Zombie Dice, please visit\nThe original website: http://www.sjgames.com/dice/zombiedice \nThe Wikipedia page: https://en.wikipedia.org/wiki/Zombie_Dice \n\nThank you for playing and enjoy the game!", "Game Credits", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
