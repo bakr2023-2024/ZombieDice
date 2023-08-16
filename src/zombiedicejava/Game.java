@@ -1,6 +1,5 @@
 package zombiedicejava;
 
-import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -66,14 +65,14 @@ public class Game extends javax.swing.JFrame {
             jButton1.removeActionListener(l);
         }
         jButton2.addActionListener((e) -> {
-            this.playSound("/zombiedicejava/roll.wav");
+            this.playSound("/zombiedicejava/sounds/roll.wav");
             zombieDice.pcs.firePropertyChange("choice", 0, 1);
             jButton2.setEnabled(false);
             jButton1.setEnabled(false);
 
         });
         jButton1.addActionListener((e) -> {
-            this.playSound("/zombiedicejava/pass.wav");
+            this.playSound("/zombiedicejava/sounds/pass.wav");
             zombieDice.pcs.firePropertyChange("choice", 0, 2);
             jButton2.setEnabled(false);
             jButton1.setEnabled(false);
